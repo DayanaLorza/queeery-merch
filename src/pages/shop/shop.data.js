@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-
-import MenuItem from '../menu-item/menu-item.component';
-import './directory.styles.scss';
-
 const SHOP_DATA = [
 	{
 		id: 1,
@@ -251,49 +246,4 @@ const SHOP_DATA = [
 	},
 ];
 
-const Directory = () => {
-	const [sections, setSections] = useState([
-		{
-			title: 'hats',
-			imageUrl: 'https://picsum.photos/id/39/600/400',
-			id: 1,
-			linkUrl: 'hats',
-		},
-		{
-			title: 'shirts',
-			imageUrl: 'https://picsum.photos/id/418/600/400',
-			id: 2,
-			linkUrl: 'shirts',
-		},
-		{
-			title: 'swag',
-			imageUrl: 'https://picsum.photos/id/250/600/400',
-			id: 3,
-			linkUrl: 'swag',
-		},
-		{
-			title: 'womens',
-			imageUrl: 'https://picsum.photos/id/252/600/400',
-			size: 'large',
-			id: 4,
-			linkUrl: 'womens',
-		},
-		{
-			title: 'mens',
-			imageUrl: 'https://picsum.photos/id/26/600/400',
-			size: 'large',
-			id: 5,
-			linkUrl: 'mens',
-		},
-	]);
-
-	return (
-		<div className='directory-menu'>
-			{sections.map(({ id, ...otherSectionProps }) => (
-				<MenuItem key={id} {...otherSectionProps} />
-			))}
-		</div>
-	);
-};
-
-export default Directory;
+export default SHOP_DATA;
